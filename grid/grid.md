@@ -16,6 +16,7 @@ Wir können Sie durch numerischen Zahlen referenzieren, beginnend mit 1.
 <br>
 
 ## Grid Tracks ##
+
 Eine Gitterspur ist der Raum zwischen zwei benachbarten Gitterlinien.
 Sie sind die Zeilen und Spalten Ihres Rasters.
 
@@ -39,6 +40,70 @@ Es ähnelt konzeptionell einer Tabellenzelle, da es die einzelne Einheit Ihres R
 
 Ein Gitterbereich besteht aus einer oder mehreren Gitterzellen *(grid cells)* und ist auf jeder Seite des Gitterbereichs durch 4 Gitterlinien begrenzt.
 Sie können auf einen Rasterbereich verweisen, indem Sie seine Begrenzungsgitterlinien oder seinen Namen verwenden, wie in der Eigenschaft `grid-template-areas` definiert.
+
+<br>
+<br>
+
+Aktivieren des Gitters (Grid)
+=============================
+
+## Display: Grid ##
+
+Ähnlich wie bei der Verwendung von Flexbox muss das CSS-Grid-Modul aktiviert sein. 
+In der Regel erfolgt dies durch Einstellen 
+`Display: grid;` auf dem übergeordneten Container.
+
+<br>
+
+Andere mögliche Werte sind:
+
+`display: inline-grid` und `display: subgrid`
+
+<br>
+
+## Behältereigenschaften (Container) ##
+
+Selectoren:   `grid-template-columns` und `grid-template-rows`
+
+Diese beiden Eigenschaften geben die Größe der Rasterspuren *(grid tracks)* und Liniennamen an. Der Eigenschaftswert wird als durch Leerzeichen getrennte Liste ausgedrückt, die als Titelliste bezeichnet wird.
+
+<br>
+
+*Mögliche Werte:*
+`Keine` | `track-list` | `auto-track-list`
+
+...aber was ist eine `track-list`
+
+Eine Liste von Werten, die die Größe jeder Gitterspur und die Namen der Gitterlinien angeben (optional).
+
+**Beispiel**
+
+.grid {
+
+  dislay: grid;
+
+  grid-template-columns: 150px 400px 200px;
+}
+
+<br>
+
+## Containereigenschaften ##
+
+**Beispiel**
+
+.container {
+
+  grid-template-columns: 40px 50px auto 50px 40px; 
+  
+  *(horizontal - 4 Spalten, auto ist variabel)*
+  
+  grid-template-rows: 25% 100px auto; 
+  
+  *(vertikal - 3 Spalten)*
+}
+
+<br>
+
 
 
 
