@@ -1,26 +1,26 @@
-Flexbox vs Grid
-===============
+**Flexbox vs Grid**
+===================
 
-Flexbox = 1-dimensionale Layouts
+**Flexbox** = 1-dimensionale Layouts
 
-Grid = 2-dimensionale Layouts
+**Grid** = 2-dimensionale Layouts
 
 <br>
 
-## Grid Line ##
+## **Grid Line** ##
 
-Die Gitterlinien sind horizontal und vertikal und formen die Grundstruktur vom Gitter. (Grid)
+Die Gitterlinien sind horizontal und vertikal und formen die Grundstruktur vom Gitter. *(Grid)*
 
 Wir können Sie durch numerischen Zahlen referenzieren, beginnend mit 1.
 
 <br>
 
-## Grid Tracks ##
+## **Grid Tracks** ##
 
 Eine Gitterspur ist der Raum zwischen zwei benachbarten Gitterlinien.
 Sie sind die Zeilen und Spalten Ihres Rasters.
 
-Wir können die Grid Tracks mit folgenden Selector trennen: (horizontal und vertikal)
+Wir können die Grid Tracks mit folgenden Selector trennen: *(horizontal und vertikal)*
 
 `grid-row-gap` oder
 `grid-column-gap`
@@ -28,7 +28,7 @@ Wir können die Grid Tracks mit folgenden Selector trennen: (horizontal und vert
 
 <br>
 
-## Grid Cell ##
+## **Grid Cell** ##
 
 Eine Gitterzelle ist der Raum zwischen 2 benachbarten Zeilengitterlinien *(rows)* und 2 benachbarten Spaltengitterlinien *(columns).*
 
@@ -36,7 +36,7 @@ Es ähnelt konzeptionell einer Tabellenzelle, da es die einzelne Einheit Ihres R
 
 <br>
 
-## Grid Areas ##
+## **Grid Areas** ##
 
 Ein Gitterbereich besteht aus einer oder mehreren Gitterzellen *(grid cells)* und ist auf jeder Seite des Gitterbereichs durch 4 Gitterlinien begrenzt.
 Sie können auf einen Rasterbereich verweisen, indem Sie seine Begrenzungsgitterlinien oder seinen Namen verwenden, wie in der Eigenschaft `grid-template-areas` definiert.
@@ -61,7 +61,7 @@ Andere mögliche Werte sind:
 
 <br>
 
-## Behältereigenschaften (Container) ##
+## **Behältereigenschaften (Container)** ##
 
 Selectoren:   `grid-template-columns` und `grid-template-rows`
 
@@ -87,7 +87,7 @@ Eine Liste von Werten, die die Größe jeder Gitterspur und die Namen der Gitter
 
 <br>
 
-## Containereigenschaften ##
+## **Containereigenschaften** ##
 
 **Beispiel**
 
@@ -103,6 +103,74 @@ Eine Liste von Werten, die die Größe jeder Gitterspur und die Namen der Gitter
 }
 
 <br>
+
+## **Grid-Template-Areas** ##
+
+
+Diese Eigenschaft definiert benannte Rasterbereiche *(grid areas)* und bietet eine Visualisierung der Rasterstruktur, wodurch das Verständnis des zugrunde liegenden Codes erleichtert werden kann.
+
+**Mögliche Werte:**
+`Keine` | `<string>+`
+
+... aber was ist mit `<string>+`
+
+Jede separate Zeichenfolge erstellt eine Zeile, während jedes Wort in der Zeichenfolge *(string)* eine Spalte erstellt.
+Alle *Strings* müssen die gleiche Anzahl von Wörtern haben, andernfalls ist die Deklaration ungültig. 
+Die Verwendung einer Folge von einem oder mehreren "." Stellt ein Nullzellen-Token dar, bei dem es sich um einen unbenannten Bereich im Raster handelt.
+
+<br>
+
+**Beispiel**
+
+.container {
+
+  grid-template-areas: 
+  
+    "logo stats"
+
+    "score stats"
+
+    board board"
+
+    "... controls";
+}
+
+<br>
+
+.container {
+
+  grid-template-columns: 50px 50px 50px 50px; **oder**
+
+  grid-template-columns: repeat(4, 50px)
+
+  grid-templates-rows: auto;
+
+  grid-templates-areas: `"header header header header"` 
+ 
+  (4 Spalten header - horizontal (column))
+
+
+  `"main main . sidebar"` 
+  
+  (2 Spalten main / 1 Spalte leer (.) 1 Spalte sidebar)
+
+  `"footer footer footer footer"`
+
+  (4 Spalten footer)
+
+}
+
+<br>
+
+Die verkürzte Schreibweise für `grid-template-columns` + `grid-template-rows` + `grid-template-areas` ist:
+
+      `grid-template: none;`
+
+<br>
+
+## **grid-column-gap und grid-row-gap** ##
+
+
 
 
 
