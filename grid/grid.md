@@ -1,3 +1,48 @@
+Flexbox vs Grid
+===============
+
+Flexbox = 1-dimensionale Layouts
+
+Grid = 2-dimensionale Layouts
+
+<br>
+
+## Grid Line ##
+
+Die Gitterlinien sind horizontal und vertikal und formen die Grundstruktur vom Gitter. (Grid)
+
+Wir können Sie durch numerischen Zahlen referenzieren, beginnend mit 1.
+
+<br>
+
+## Grid Tracks ##
+Eine Gitterspur ist der Raum zwischen zwei benachbarten Gitterlinien.
+Sie sind die Zeilen und Spalten Ihres Rasters.
+
+Wir können die Grid Tracks mit folgenden Selector trennen: (horizontal und vertikal)
+
+`grid-row-gap` oder
+`grid-column-gap`
+
+
+<br>
+
+## Grid Cell ##
+
+Eine Gitterzelle ist der Raum zwischen 2 benachbarten Zeilengitterlinien *(rows)* und 2 benachbarten Spaltengitterlinien *(columns).*
+
+Es ähnelt konzeptionell einer Tabellenzelle, da es die einzelne Einheit Ihres Rasters ist.
+
+<br>
+
+## Grid Areas ##
+
+Ein Gitterbereich besteht aus einer oder mehreren Gitterzellen *(grid cells)* und ist auf jeder Seite des Gitterbereichs durch 4 Gitterlinien begrenzt.
+Sie können auf einen Rasterbereich verweisen, indem Sie seine Begrenzungsgitterlinien oder seinen Namen verwenden, wie in der Eigenschaft `grid-template-areas` definiert.
+
+
+
+
 Container
 =========
 
